@@ -6,7 +6,7 @@ class CQueryBase extends Model
 {
     public static function getsAll( $arrField = [], & $arrRtn= [], & $sDesc = "未知错误" )
     {
-       $nErrCode = CErrorCode::SUCCESS;
+        $nErrCode = CErrorCode::SUCCESS;
 
 
     }
