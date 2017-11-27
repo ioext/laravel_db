@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class CQueryBase extends Model
 {
+    ######################### INSERT ################
+
+    public static function add( $arrField, &$arrRtn = [], & $sDesc = "未知错误" )
+    {
+
+    }
     /**
      * 获取所有数据
      *
@@ -16,7 +22,7 @@ class CQueryBase extends Model
      */
     public static function getsAll( $arrField = [], & $arrRtn= [], & $sDesc = "未知错误" )
     {
-        $nErrCode = CErrorCode::SUCCESS;
+        $nErrCode = CErrCode::SUCCESS;
 
         if( ! is_array( $arrField ) || count( $arrField ) <= 0 )
         {
@@ -27,7 +33,7 @@ class CQueryBase extends Model
 
         if( $arrRtn == NULL )
         {
-            $nErrCode = CErrorCode::SUCCESS_NOTING_DATA;
+            $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
             $sDesc = "获取成功,数据为空";
         }
         else

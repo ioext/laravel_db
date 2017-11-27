@@ -2,7 +2,7 @@
 
 namespace ioext\laravel_db;
 
-class CErrorCode
+class CErrCode
 {
     const SUCCESS = 200;
 
