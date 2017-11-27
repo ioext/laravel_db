@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CQueryBase extends Model
 {
-    ######################### INSERT ################
+
 
     public static function add( $arrField, &$arrRtn = [], & $sDesc = "success" )
     {
