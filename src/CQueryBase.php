@@ -8,6 +8,11 @@ class CQueryBase extends Model
     {
         $nErrCode = CErrorCode::SUCCESS;
 
+        if( ! is_array( $arrField ) || count( $arrField ) <= 0 )
+        {
+            $arrField = ['*'];
+        }
+
 
         return $nErrCode;
 
