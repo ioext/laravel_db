@@ -12,8 +12,21 @@ class CQueryBase extends Model
     {
         $nErrCode = CErrCode::SUCCESS;
 
+        if( !is_array( $arrField ) || count( $arrField ) <= 0 )
+        {
 
+        }
+        else
+        {
+            $nErrCode = CErrCode::PARAM_ERROR;
+            $sDesc = "参数解析错误";
+        }
+
+
+        return $nErrCode;
     }
+
+
     /**
      * 获取所有数据
      *
