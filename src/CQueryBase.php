@@ -2,6 +2,8 @@
 
 namespace ioext\laravel_db;
 
+use Illuminate\Database\Eloquent\Model;
+
 class CQueryBase extends Model
 {
     public static function getsAll( $arrField = [], & $arrRtn= [], & $sDesc = "未知错误" )
