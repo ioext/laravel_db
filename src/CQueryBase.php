@@ -8,8 +8,10 @@ class CQueryBase extends Model
 {
     ######################### INSERT ################
 
-    public static function add( $arrField, &$arrRtn = [], & $sDesc = "未知错误" )
+    public static function add( $arrField, &$arrRtn = [], & $sDesc = "success" )
     {
+        $nErrCode = CErrCode::SUCCESS;
+
 
     }
     /**
@@ -20,7 +22,7 @@ class CQueryBase extends Model
      * @param string $sDesc
      * @return int
      */
-    public static function getsAll( $arrField = [], & $arrRtn= [], & $sDesc = "未知错误" )
+    public static function getsAll( $arrField = [], & $arrRtn= [], & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
 
@@ -39,7 +41,6 @@ class CQueryBase extends Model
         else
         {
             $arrRtn = $arrRtn->toArray();
-            $sDesc = "success";
         }
 
         return $nErrCode;
