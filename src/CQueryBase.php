@@ -14,7 +14,15 @@ class CQueryBase extends Model
 
         if( !is_array( $arrField ) || count( $arrField ) <= 0 )
         {
+            $nId = self::query()->insertGetId( $arrField );
+            if ( is_int( $nId ) && $nId > 0 )
+            {
 
+            }
+            else
+            {
+               $nErrCode = CErrCode::INSERT_FALSE;
+            }
         }
         else
         {
