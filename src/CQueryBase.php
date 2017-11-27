@@ -15,6 +15,8 @@ class CQueryBase extends Model
             $arrField = ['*'];
         }
 
+        $arrRtn = self::query()->get( $arrField );
+
 
         return $nErrCode;
 
