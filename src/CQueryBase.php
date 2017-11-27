@@ -145,4 +145,7 @@ class CQueryBase extends Model
 
         return $nErrCode;
     }
+
+
+
 }
