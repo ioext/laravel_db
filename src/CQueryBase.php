@@ -118,6 +118,7 @@ class CQueryBase extends Model
      * 获取所有数据
      * 获取所有数据
      * 获取所有数据
+     * 获取所有数据
      *
      * @param array $arrField  所需查询的字段
      * @param array $arrRtn
