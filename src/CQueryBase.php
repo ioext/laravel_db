@@ -7,7 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class CQueryBase extends Model
 {
 
-
+    /**
+     * 插入一条数据
+     *
+     * @param $arrField
+     * @param array $arrRtn
+     * @param string $sDesc
+     * @return int
+     */
     public static function add( $arrField, &$arrRtn = [], & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
@@ -33,6 +40,23 @@ class CQueryBase extends Model
             $sDesc = "参数解析错误";
         }
 
+
+        return $nErrCode;
+    }
+
+
+    public static function del( $arrWhere, & $bRtn, $sDesc = "success" )
+    {
+        $nErrCode = CErrCode::SUCCESS;
+
+        if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
+        {
+
+        }
+        else
+        {
+
+        }
 
         return $nErrCode;
     }
