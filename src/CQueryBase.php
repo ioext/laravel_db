@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class CQueryBase extends Model
 {
+    /**
+     * 获取所有数据
+     *
+     * @param array $arrField  所需查询的字段
+     * @param array $arrRtn
+     * @param string $sDesc
+     * @return int
+     */
     public static function getsAll( $arrField = [], & $arrRtn= [], & $sDesc = "未知错误" )
     {
         $nErrCode = CErrorCode::SUCCESS;
