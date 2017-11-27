@@ -9,5 +9,8 @@ class CQueryBase extends Model
         $nErrCode = CErrorCode::SUCCESS;
 
 
+        return $nErrCode;
+
+
     }
 }
