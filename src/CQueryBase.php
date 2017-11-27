@@ -45,6 +45,14 @@ class CQueryBase extends Model
     }
 
 
+    /**
+     * 删除一条数据(物理删除)
+     *
+     * @param $arrWhere
+     * @param bool $bRtn
+     * @param string $sDesc
+     * @return int | bRtn   判断 nErrCode==200和bRtn==true
+     */
     public static function del( $arrWhere, & $bRtn = false, $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
@@ -52,13 +60,10 @@ class CQueryBase extends Model
         if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
         {
             $bRtn = self::query()->where( $arrWhere )->delete();
-            if( $bRtn )
-            {
-                $nErrCode = CErrCode::SUCCESS;
-            }
-            else
+            if( ! $bRtn )
             {
                 $nErrCode = CErrCode::DELETE_FALSE;
+                $sDesc = "删除失败";
             }
         }
         else
@@ -67,6 +72,31 @@ class CQueryBase extends Model
             $sDesc = "参数解析错误";
         }
 
+        return $nErrCode;
+    }
+
+    /**
+     * 更新
+     *
+     * @param $arrWhere
+     * @param $arrOrWhere
+     * @param $arrField
+     * @param $bRtn
+     * @param string $sDesc
+     * @return int
+     */
+    public static function updateByWhere( $arrWhere, $arrOrWhere, $arrField, & $bRtn, & $sDesc = "success" )
+    {
+        $nErrCode = CErrCode::SUCCESS;
+        if( is_array( $arrWhere ) && count( $arrWhere ) > 0 && is_array( $arrField ) && count( $arrField ) > 0 )
+        {
+
+        }
+        else
+        {
+            $nErrCode = CErrCode::PARAM_ERROR;
+            $sDesc = "参数解析错误";
+        }
         return $nErrCode;
     }
 
