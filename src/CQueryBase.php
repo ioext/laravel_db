@@ -17,6 +17,15 @@ class CQueryBase extends Model
 
         $arrRtn = self::query()->get( $arrField );
 
+        if( $arrRtn == NULL )
+        {
+            $nErrCode = CErrorCode::SUCCESS_NOTING_DATA;
+            $sDesc = "获取成功,数据为空";
+        }
+        else
+        {
+            $arrRtn = $arrRtn->toArray();
+        }
 
         return $nErrCode;
 
