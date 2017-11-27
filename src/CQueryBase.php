@@ -45,17 +45,26 @@ class CQueryBase extends Model
     }
 
 
-    public static function del( $arrWhere, & $bRtn, $sDesc = "success" )
+    public static function del( $arrWhere, & $bRtn = false, $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
 
         if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
         {
-
+            $bRtn = self::query()->where( $arrWhere )->delete();
+            if( $bRtn )
+            {
+                $nErrCode = CErrCode::SUCCESS;
+            }
+            else
+            {
+                $nErrCode = CErrCode::DELETE_FALSE;
+            }
         }
         else
         {
-
+            $nErrCode = CErrCode::PARAM_ERROR;
+            $sDesc = "参数解析错误";
         }
 
         return $nErrCode;
