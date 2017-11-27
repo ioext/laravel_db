@@ -92,11 +92,17 @@ class CQueryBase extends Model
         {
             if( is_array( $arrOrWhere ) && count( $arrOrWhere ) > 0 )
             {
-
+                $bRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->update( $arrField );
             }
             else
             {
                 $bRtn = self::query()->where( $arrWhere )->update( $arrField );
+            }
+
+            if( ! $bRtn )
+            {
+                $nErrCode = CErrCode::UPDATE_FALSE;
+                $sDesc = "更新失败";
             }
         }
         else
