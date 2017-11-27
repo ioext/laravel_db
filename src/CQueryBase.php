@@ -17,11 +17,14 @@ class CQueryBase extends Model
             $nId = self::query()->insertGetId( $arrField );
             if ( is_int( $nId ) && $nId > 0 )
             {
-
+                $arrRtn = [
+                    'id' => $nId,
+                ];
             }
             else
             {
-               $nErrCode = CErrCode::INSERT_FALSE;
+                $nErrCode = CErrCode::INSERT_FALSE;
+                $sDesc = "添加失败";
             }
         }
         else
