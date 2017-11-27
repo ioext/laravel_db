@@ -25,6 +25,7 @@ class CQueryBase extends Model
         else
         {
             $arrRtn = $arrRtn->toArray();
+            $sDesc = "success";
         }
 
         return $nErrCode;
