@@ -194,6 +194,14 @@ class CQueryBase extends Model
     }
 
 
+    /**
+     * @param $arrWhere
+     * @param $arrOrWhere
+     * @param $arrField
+     * @param $arrRtn
+     * @param string $sDesc
+     * @return int
+     */
     public static function getsByWhere( $arrWhere, $arrOrWhere, $arrField, & $arrRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
