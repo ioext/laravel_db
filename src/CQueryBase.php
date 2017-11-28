@@ -325,7 +325,12 @@ class CQueryBase extends Model
         {
             if(  )
         }
-        elseif( $arrWhere == '' || count( $arrWhere ) == 0 )
+        elseif( $arrWhere == '' || count( $arrWhere ) == 0 || $arrWhere == null )
+        {
+            $nErrCode = CErrCode::PARAM_ERROR;
+            $sDesc = "参数解析错误";
+        }
+        else
         {
             $nErrCode = CErrCode::PARAM_ERROR;
             $sDesc = "参数解析错误";
