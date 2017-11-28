@@ -321,6 +321,15 @@ class CQueryBase extends Model
             $arrField = ['*'];
         }
 
+        if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
+        {
+            if(  )
+        }
+        elseif( $arrWhere == '' || count( $arrWhere ) == 0 )
+        {
+            $nErrCode = CErrCode::PARAM_ERROR;
+            $sDesc = "参数解析错误";
+        }
         return $nErrCode;
     }
 }
