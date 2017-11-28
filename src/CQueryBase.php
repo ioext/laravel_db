@@ -196,7 +196,22 @@ class CQueryBase extends Model
 
     public static function getsByWhere( $arrWhere, $arrOrWhere, $arrField, & $arrRtn, & $sDesc = "success" )
     {
+        $nErrCode = CErrCode::SUCCESS;
+        if( ! is_array( $arrField ) || count( $arrField ) <= 0 )
+        {
+            $arrField = ['*'];
+        }
 
+        if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
+        {
+
+        }
+        else
+        {
+            $nErrCode = CErrCode::PARAM_ERROR;
+            $sDesc = "参数解析错误";
+        }
+        return $nErrCode;
     }
 
 }
