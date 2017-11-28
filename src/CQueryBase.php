@@ -195,6 +195,8 @@ class CQueryBase extends Model
 
 
     /**
+     * 根据条件获取
+     *
      * @param $arrWhere
      * @param $arrOrWhere
      * @param $arrField
@@ -239,4 +241,8 @@ class CQueryBase extends Model
         return $nErrCode;
     }
 
+    public static function getsWhereOrderPage()
+    {
+
+    }
 }
