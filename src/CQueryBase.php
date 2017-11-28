@@ -272,6 +272,14 @@ class CQueryBase extends Model
     }
 
 
+    /**
+     * @param $sField
+     * @param $arrField
+     * @param $arrWhereIn
+     * @param $arrRtn
+     * @param string $sDesc
+     * @return int
+     */
     public static function getsByWhereIn($sField, $arrField, $arrWhereIn, & $arrRtn, & $sDesc = "success")
     {
         $nErrCode = CErrCode::SUCCESS;
