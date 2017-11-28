@@ -244,6 +244,7 @@ class CQueryBase extends Model
 
     public static function getsWhereOrderPage()
     {
-
+        $nErrCode = CErrCode::SUCCESS;
+        return $nErrCode;
     }
 }
