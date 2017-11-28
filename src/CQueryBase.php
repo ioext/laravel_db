@@ -272,5 +272,9 @@ class CQueryBase extends Model
     }
 
 
+    public static function getsByWhereIn($sField,$arrField)
+    {
+
+    }
 
 }
