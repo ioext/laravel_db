@@ -113,6 +113,10 @@ class CQueryBase extends Model
         return $nErrCode;
     }
 
+    public static function getOneByWhere()
+    {
+
+    }
 
     /**
      * 获取所有数据
