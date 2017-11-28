@@ -223,7 +223,6 @@ class CQueryBase extends Model
                 else
                 {
                     $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->get( $arrField );
-                    $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->get( $arrField );
                 }
             }
             else
