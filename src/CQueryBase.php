@@ -283,6 +283,15 @@ class CQueryBase extends Model
         if( ! is_null( $sField ) && $sField != '' && is_array( $arrWhereIn ) && count( $arrWhereIn ) > 0  )
         {
             $arrRtn = self::query()->whereIn($sField,$arrWhereIn)->get($arrField);
+            if( $arrRtn == null )
+            {
+                $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
+                $sDesc = "获取成功,数据为空";
+            }
+            else
+            {
+                $arrRtn = $arrRtn->toArray();
+            }
         }
         else
         {
