@@ -85,7 +85,7 @@ class CQueryBase extends Model
      * @param string $sDesc
      * @return int
      */
-    public static function updateByWhere( $arrWhere, $arrOrWhere, $arrField, & $bRtn, & $sDesc = "success" )
+    public static function updateByWhere( $arrField,  $arrWhere, $arrOrWhere, & $bRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
         if( is_array( $arrWhere ) && count( $arrWhere ) > 0 && is_array( $arrField ) && count( $arrField ) > 0 )
@@ -123,7 +123,7 @@ class CQueryBase extends Model
      * @param string $sDesc
      * @return int
      */
-    public static function getOneByWhere( $arrWhere,$arrOrWhere, $arrField, & $arrRtn, & $sDesc = "success" )
+    public static function getOneByWhere( $arrField, $arrWhere,$arrOrWhere, & $arrRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
 
