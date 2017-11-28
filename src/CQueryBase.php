@@ -113,6 +113,16 @@ class CQueryBase extends Model
         return $nErrCode;
     }
 
+    /**
+     * 获取一条数据
+     *
+     * @param $arrWhere
+     * @param $arrOrWhere
+     * @param $arrField
+     * @param $arrRtn
+     * @param string $sDesc
+     * @return int
+     */
     public static function getOneByWhere( $arrWhere,$arrOrWhere, $arrField, & $arrRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
