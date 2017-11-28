@@ -204,7 +204,14 @@ class CQueryBase extends Model
 
         if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
         {
+            if( is_array( $arrOrWhere ) && count( $arrOrWhere ) > 0 )
+            {
 
+            }
+            else
+            {
+
+            }
         }
         else
         {
