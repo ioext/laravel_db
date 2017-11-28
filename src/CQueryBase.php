@@ -273,6 +273,8 @@ class CQueryBase extends Model
 
 
     /**
+     * where in 获取二维数组
+     *
      * @param $sField
      * @param $arrField
      * @param $arrWhereIn
