@@ -113,7 +113,7 @@ class CQueryBase extends Model
         return $nErrCode;
     }
 
-    public static function getOneByWhere()
+    public static function getOneByWhere( $arrWhere,$arrOrWhere, $arrField, & $arrRtn, & $sDesc = "" )
     {
 
     }
