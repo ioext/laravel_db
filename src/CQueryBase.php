@@ -266,7 +266,6 @@ class CQueryBase extends Model
 
     public static function getsWhereOrderPage( $arrWhere, $arrOrWhere,$arrOrderBy,$nPerPage=15, & $arrRtn, & $sDesc = "success" )
     {
-        $nErrCode = CErrCode::SUCCESS;
         if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
         {
 
