@@ -280,7 +280,14 @@ class CQueryBase extends Model
             $arrField = ['*'];
         }
 
-        if( ! is_null( $sField ) && $sField != '' &&  )
+        if( ! is_null( $sField ) && $sField != '' && is_array( $arrWhere ) && count( $arrWhere ) > 0  )
+        {
+
+        }
+        else
+        {
+
+        }
         return $nErrCode;
     }
 
