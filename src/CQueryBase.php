@@ -272,7 +272,7 @@ class CQueryBase extends Model
     }
 
 
-    public static function getsByWhereIn($sField,$arrField)
+    public static function getsByWhereIn($sField, $arrField, $arrWhere, & $arrRtn, & $sDesc = "success")
     {
 
     }
