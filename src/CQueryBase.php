@@ -265,6 +265,5 @@ class CQueryBase extends Model
 
 
     public static function getsWhereOrderPage( $arrWhere, $arrOrWhere,$arrOrderBy,$nPerPage=15, & $arrRtn, & $sDesc = "success" )
-    {
 
 }
