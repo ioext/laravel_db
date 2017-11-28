@@ -196,6 +196,8 @@ class CQueryBase extends Model
 
     /**
      * 根据条件获取二维数组
+     * 支持or where
+     * 支持order by
      *
      * @param $arrWhere
      * @param $arrOrWhere
@@ -204,7 +206,7 @@ class CQueryBase extends Model
      * @param string $sDesc
      * @return int
      */
-    public static function getsByWhere( $arrWhere, $arrOrWhere, $arrField,$arrOrderBy,$nPerPage=15, & $arrRtn, & $sDesc = "success" )
+    public static function getsByWhere( $arrField, $arrWhere, $arrOrWhere, $arrOrderBy,$nPerPage=15, & $arrRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
         if( ! is_array( $arrField ) || count( $arrField ) <= 0 )
@@ -218,7 +220,20 @@ class CQueryBase extends Model
             {
                 if( is_array( $arrOrderBy ) && count( $arrOrderBy ) > 0 )
                 {
+                    $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere );
+                    foreach( $arrOrderBy as $k => $v )
+                    {
+                        $arrRtn->orderBy( $v[0], $v[1] );
+                    }
 
+                    if( is_int( $nPerPage ) && $nPerPage > 0 )
+                    {
+                        $arrRtn = $arrRtn->paginate( $nPerPage )->get( $arrField );
+                    }
+                    else
+                    {
+                        $arrRtn = $arrRtn->get( $arrField );
+                    }
                 }
                 else
                 {
