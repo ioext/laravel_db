@@ -272,7 +272,7 @@ class CQueryBase extends Model
     }
 
 
-    public static function getsByWhereIn($sField, $arrField, $arrWhere, & $arrRtn, & $sDesc = "success")
+    public static function getsByWhereIn($sField, $arrField, $arrWhereIn, & $arrRtn, & $sDesc = "success")
     {
         $nErrCode = CErrCode::SUCCESS;
         if( ! is_array( $arrField ) || count( $arrField ) <= 0 )
@@ -280,9 +280,9 @@ class CQueryBase extends Model
             $arrField = ['*'];
         }
 
-        if( ! is_null( $sField ) && $sField != '' && is_array( $arrWhere ) && count( $arrWhere ) > 0  )
+        if( ! is_null( $sField ) && $sField != '' && is_array( $arrWhereIn ) && count( $arrWhereIn ) > 0  )
         {
-
+            $arrRtn = self::query()->whereIn($sField,$arrWhereIn)->get($arrField);
         }
         else
         {
