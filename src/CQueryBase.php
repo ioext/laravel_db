@@ -312,7 +312,7 @@ class CQueryBase extends Model
     }
 
 
-    public static function getsByWhereGroupBy()
+    public static function getsByWhereGroupBy( $arrField, $arrWhere, $arrGroupByField, & $arrRtn, $sDesc = "success" )
     {
 
     }
