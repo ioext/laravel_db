@@ -116,9 +116,32 @@ class CQueryBase extends Model
     public static function getOneByWhere( $arrWhere,$arrOrWhere, $arrField, & $arrRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
+
+        if( ! is_array( $arrField ) || count( $arrField ) <= 0 )
+        {
+            $arrField = ['*'];
+        }
+
         if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
         {
+            if( is_array( $arrOrWhere ) && count( $arrOrWhere ) > 0 )
+            {
+                $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->first( $arrField );
+            }
+            else
+            {
+                $arrRtn = self::query()->where( $arrWhere )->first( $arrField );
+            }
 
+            if( $arrRtn == null )
+            {
+                $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
+                $sDesc = "获取成功,数据为空";
+            }
+            else
+            {
+                $arrRtn = $arrRtn->toArray();
+            }
         }
         else
         {
