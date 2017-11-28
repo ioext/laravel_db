@@ -197,12 +197,16 @@ class CQueryBase extends Model
      * 根据条件获取二维数组
      * 支持or where
      * 支持order by
+     * 支持分页
+     * 默认传递page
      *
-     * @param $arrField
-     * @param $arrWhere
-     * @param $arrOrWhere
-     * @param $arrOrderBy [[field,'desc'],[field,'asc']]
-     * @param int $nPerPage
+     * url   http://laravelacademy.org/post/6160.html
+     *
+     * @param $arrField     [field,field]
+     * @param $arrWhere     [[field,'=',value],[field,'=',value]]
+     * @param $arrOrWhere   [[field,'=',value],[field,'=',value]]
+     * @param $arrOrderBy   [[field,'desc'],[field,'asc']]
+     * @param int $nPerPage 15
      * @param $arrRtn
      * @param string $sDesc
      * @return int
