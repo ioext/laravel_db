@@ -114,7 +114,7 @@ class CQueryBase extends Model
     }
 
     /**
-     * 获取一条数据
+     * 获取一条数据一维数组
      *
      * @param $arrWhere
      * @param $arrOrWhere
@@ -195,7 +195,7 @@ class CQueryBase extends Model
 
 
     /**
-     * 根据条件获取
+     * 根据条件获取二维数组
      *
      * @param $arrWhere
      * @param $arrOrWhere
@@ -240,6 +240,7 @@ class CQueryBase extends Model
         }
         return $nErrCode;
     }
+
 
     public static function getsWhereOrderPage()
     {
