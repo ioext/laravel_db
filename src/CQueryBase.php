@@ -194,5 +194,9 @@ class CQueryBase extends Model
     }
 
 
+    public static function getsByWhere( $arrWhere, $arrOrWhere, $arrField, & $arrRtn, & $sDesc = "success" )
+    {
+
+    }
 
 }
