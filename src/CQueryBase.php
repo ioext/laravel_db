@@ -193,15 +193,16 @@ class CQueryBase extends Model
         return $nErrCode;
     }
 
-
     /**
      * 根据条件获取二维数组
      * 支持or where
      * 支持order by
      *
+     * @param $arrField
      * @param $arrWhere
      * @param $arrOrWhere
-     * @param $arrField
+     * @param $arrOrderBy [[field,'desc'],[field,'asc']]
+     * @param int $nPerPage
      * @param $arrRtn
      * @param string $sDesc
      * @return int
@@ -221,9 +222,12 @@ class CQueryBase extends Model
                 if( is_array( $arrOrderBy ) && count( $arrOrderBy ) > 0 )
                 {
                     $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere );
-                    foreach( $arrOrderBy as $k => $v )
+                    foreach( $arrOrderBy as $nFKey => $arrFValue )
                     {
-                        $arrRtn->orderBy( $v[0], $v[1] );
+                        foreach ( $arrFValue as $v )
+                        {
+                            $arrRtn->orderBy( $v[0], $v[1] );
+                        }
                     }
 
                     if( is_int( $nPerPage ) && $nPerPage > 0 )
