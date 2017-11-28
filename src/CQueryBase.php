@@ -230,6 +230,7 @@ class CQueryBase extends Model
                     $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->get( $arrField );
                     $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->get( $arrField );
                     $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->get( $arrField );
+                    $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->get( $arrField );
 
 
 
