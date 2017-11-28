@@ -204,7 +204,7 @@ class CQueryBase extends Model
      * @param string $sDesc
      * @return int
      */
-    public static function getsByWhere( $arrWhere, $arrOrWhere, $arrField, & $arrRtn, & $sDesc = "success" )
+    public static function getsByWhere( $arrWhere, $arrOrWhere, $arrField,$arrOrderBy,$nPerPage=15, & $arrRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
         if( ! is_array( $arrField ) || count( $arrField ) <= 0 )
@@ -216,7 +216,14 @@ class CQueryBase extends Model
         {
             if( is_array( $arrOrWhere ) && count( $arrOrWhere ) > 0 )
             {
-                $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->get( $arrField );
+                if( is_array( $arrOrderBy ) && count( $arrOrderBy ) > 0 )
+                {
+
+                }
+                else
+                {
+                    $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->get( $arrField );
+                }
             }
             else
             {
@@ -242,9 +249,18 @@ class CQueryBase extends Model
     }
 
 
-    public static function getsWhereOrderPage()
+    public static function getsWhereOrderPage( $arrWhere, $arrOrWhere,$arrOrderBy,$nPerPage=15, & $arrRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
+        if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
+        {
+
+        }
+        else
+        {
+            $nErrCode = CErrCode::PARAM_ERROR;
+            $sDesc = "参数解析错误";
+        }
         return $nErrCode;
     }
 }
