@@ -113,9 +113,18 @@ class CQueryBase extends Model
         return $nErrCode;
     }
 
-    public static function getOneByWhere( $arrWhere,$arrOrWhere, $arrField, & $arrRtn, & $sDesc = "" )
+    public static function getOneByWhere( $arrWhere,$arrOrWhere, $arrField, & $arrRtn, & $sDesc = "success" )
     {
+        $nErrCode = CErrCode::SUCCESS;
+        if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
+        {
 
+        }
+        else
+        {
+
+        }
+        return $nErrCode;
     }
 
     /**
