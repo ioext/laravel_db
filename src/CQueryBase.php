@@ -337,6 +337,7 @@ class CQueryBase extends Model
             if(  )//todo
             if(  )//todo
             if(  )//todo
+            if(  )//todo
         }
         elseif( $arrWhere == '' || count( $arrWhere ) == 0 || $arrWhere == null )
         {
