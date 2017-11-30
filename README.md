@@ -1,8 +1,6 @@
 # LARAVEL ORM DB
 
 
-> laravel 数据库底层操作
-
 * 1、Install  
 composer require ioext/laravel_db  
 
