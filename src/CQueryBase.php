@@ -329,7 +329,14 @@ class CQueryBase extends Model
         }
         elseif( $arrWhere == '' || count( $arrWhere ) == 0 || $arrWhere == null )
         {
-            if( is_array( $arrGroupByField ) )
+            if( is_array( $arrGroupByField ) && count( $arrGroupByField ) > 0 )
+            {
+                $arrRtn = $arrRtn->get( $arrField );
+                foreach ( $arrGroupByField as $v )
+                {
+                    $arrRtn = $arrRtn->groupBy( $v );
+                }
+            }
         }
         else
         {
