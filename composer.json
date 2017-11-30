@@ -17,7 +17,12 @@
   },
   "autoload" : {
     "psr-4" : {
-      "laravel_db\\" : "src"
+      "ioext\\" : "src"
+    }
+  },
+  "autoload-dev" : {
+    "psr-4" : {
+      "ioext\\" : "src"
     }
   },
   "repositories": {
