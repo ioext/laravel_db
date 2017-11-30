@@ -1,5 +1,5 @@
 # LARAVEL ORM DB
-
+[![Latest Stable Version](https://poser.pugx.org/moext/core/v/stable)](https://packagist.org/packages/moext/core)[![Total Downloads](https://poser.pugx.org/moext/core/downloads)](https://packagist.org/packages/moext/core)[![License](https://poser.pugx.org/moext/core/license)](https://packagist.org/packages/moext/core)
 
 * 1、Install  
 composer require ioext/laravel_db  
