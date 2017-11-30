@@ -325,7 +325,14 @@ class CQueryBase extends Model
 
         if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
         {
-            if(  )//todo
+            if( is_array( $arrGroupByField ) && count( $arrGroupByField ) > 0 )//todo
+            {
+
+            }
+            else
+            {
+                $nErrCode = self::getsByWhere( $arrField,$arrWhere,[],[],0,$arrRtn,$sDesc );
+            }
         }
         elseif( $arrWhere == '' || count( $arrWhere ) == 0 || $arrWhere == null )
         {
@@ -336,6 +343,11 @@ class CQueryBase extends Model
                 {
                     $arrRtn = $arrRtn->groupBy( $v );
                 }
+            }
+            else
+            {
+                $nErrCode = CErrCode::PARAM_ERROR;
+                $sDesc = "参数解析错误";
             }
         }
         else
