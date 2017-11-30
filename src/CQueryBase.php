@@ -327,7 +327,11 @@ class CQueryBase extends Model
         {
             if( is_array( $arrGroupByField ) && count( $arrGroupByField ) > 0 )//todo
             {
-
+                $arrRtn = $arrRtn->where($arrWhere)->get( $arrField );
+                foreach ( $arrGroupByField as $v )
+                {
+                    $arrRtn = $arrRtn->groupBy( $v );
+                }
             }
             else
             {
