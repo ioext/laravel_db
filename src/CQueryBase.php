@@ -321,13 +321,15 @@ class CQueryBase extends Model
             $arrField = ['*'];
         }
 
+        $arrRtn = self::query();
+
         if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
         {
             if(  )//todo
         }
         elseif( $arrWhere == '' || count( $arrWhere ) == 0 || $arrWhere == null )
         {
-
+            if( is_array( $arrGroupByField ) )
         }
         else
         {
