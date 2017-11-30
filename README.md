@@ -1,10 +1,12 @@
 # LARAVEL ORM DB
-============
-[![Total Downloads]]
+
+
 > laravel 数据库底层操作
 
-* 1、composer require ioext/laravel_db 
+* 1、Install  
+composer require ioext/laravel_db  
 
+* 2、operation example
 
 ```
  public function test()
