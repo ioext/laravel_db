@@ -342,6 +342,15 @@ class CQueryBase extends Model
                 {
                     $arrRtn = $arrRtn->groupBy( $v );
                 }
+                if( $arrRtn == null )
+                {
+                    $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
+                    $sDesc = "获取成功,数据为空";
+                }
+                else
+                {
+                    $arrRtn = $arrRtn->toArray();
+                }
             }
             else
             {
@@ -357,6 +366,15 @@ class CQueryBase extends Model
                 {
                     $arrRtn = $arrRtn->groupBy( $v );
                 }
+                if( $arrRtn == null )
+                {
+                    $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
+                    $sDesc = "获取成功,数据为空";
+                }
+                else
+                {
+                    $arrRtn = $arrRtn->toArray();
+                }
             }
             else
             {
@@ -369,6 +387,7 @@ class CQueryBase extends Model
             $nErrCode = CErrCode::PARAM_ERROR;
             $sDesc = "参数解析错误";
         }
+
         return $nErrCode;
     }
 
