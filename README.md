@@ -1,13 +1,13 @@
 # LARAVEL ORM DB
 ============
-[![Total Downloads]
+[![Total Downloads]]
 > laravel 数据库底层操作
 
 * 1、composer require ioext/laravel_db 
 
 
 ```
- public function test1()
+ public function test()
     {
         $arrField = ['*'];
         $arrWhere = [
