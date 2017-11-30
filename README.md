@@ -1,7 +1,8 @@
 # LARAVEL ORM DB
-[![Latest Stable Version](https://poser.pugx.org/ioext/laravel_db/v/stable)](https://packagist.org/packages/ioext/laravel_db)  
+[![Latest Stable Version](https://poser.pugx.org/ioext/laravel_db/version)](https://packagist.org/packages/ioext/laravel_db)  
 [![Total Downloads](https://poser.pugx.org/ioext/laravel_db/downloads)](https://packagist.org/packages/ioext/laravel_db)  
-[![License](https://poser.pugx.org/ioext/laravel_db/license)](https://packagist.org/packages/ioext/laravel_db)
+[![License](https://poser.pugx.org/ioext/laravel_db/license)](https://packagist.org/packages/ioext/laravel_db)  
+
 
 * 1、Install  
 composer require ioext/laravel_db  
