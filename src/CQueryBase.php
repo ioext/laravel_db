@@ -371,4 +371,10 @@ class CQueryBase extends Model
         }
         return $nErrCode;
     }
+
+    /**
+     *
+     */
+    public static function test()
+    {}
 }
