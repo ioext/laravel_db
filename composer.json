@@ -1,7 +1,7 @@
 {
   "name": "ioext/laravel_db",
   "description": "PHP Library",
-  "keywords": ["library", "laravel", "DB", "laravel_db"],
+  "keywords": ["laravel", "DB", "laravel_db","ORM"],
   "license": "MIT",
   "type": "library",
   "homepage": "https://github.com/ioext",
