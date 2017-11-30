@@ -312,6 +312,14 @@ class CQueryBase extends Model
     }
 
 
+    /**
+     * @param $arrField
+     * @param $arrWhere
+     * @param $arrGroupByField
+     * @param $arrRtn
+     * @param string $sDesc
+     * @return int
+     */
     public static function getsByWhereGroupBy( $arrField, $arrWhere, $arrGroupByField, & $arrRtn, $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
