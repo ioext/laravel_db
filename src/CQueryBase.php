@@ -256,20 +256,7 @@ class CQueryBase extends Model
                 $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
                 $sDesc = "获取成功,数据为空";
             }
-            else
-            {
 
-            }
-
-            if( $arrRtn == null )
-            {
-                $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
-                $sDesc = "获取成功,数据为空";
-            }
-            else
-            {
-                $arrRtn = $arrRtn->toArray();
-            }
         }
         else
         {
