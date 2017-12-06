@@ -228,7 +228,7 @@ class CQueryBase extends Model
                     $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere );
                     foreach( $arrOrderBy as $nFKey => $arrFValue )
                     {
-                        $arrRtn->orderBy( $arrFValue[0], $v[1] );
+                        $arrRtn->orderBy( $arrFValue[0], $arrFValue[1] );
                     }
 
                     if( is_int( $nPerPage ) && $nPerPage > 0 )
