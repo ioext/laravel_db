@@ -251,14 +251,13 @@ class CQueryBase extends Model
             }
 
             $arrRtn = $arrRtn->toArray();
-            if( ! is_array( $arrRtn ) || count( $arrRtn ) > 0 )
+            if( ! is_array( $arrRtn ) || count( $arrRtn ) <= 0 )
             {
 
             }
             else
             {
-                $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
-                $sDesc = "获取成功,数据为空";
+
             }
 
             if( $arrRtn == null )
