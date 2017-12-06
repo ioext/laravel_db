@@ -250,7 +250,8 @@ class CQueryBase extends Model
                 $arrRtn = self::query()->where( $arrWhere )->get( $arrField );
             }
 
-            $arrRtn = $arrRtn->toArray()
+            $arrRtn = $arrRtn->toArray();
+            if( is_array( $arrRtn ) )
 
             if( $arrRtn == null )
             {
