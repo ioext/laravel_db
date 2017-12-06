@@ -3,6 +3,7 @@
 namespace ioext\laravel_db;
 
 use Illuminate\Database\Eloquent\Model;
+use ioext\tool\CLib;
 
 class CQueryBase extends Model
 {
@@ -19,7 +20,7 @@ class CQueryBase extends Model
     {
         $nErrCode = CErrCode::SUCCESS;
 
-        if( !is_array( $arrField ) || count( $arrField ) <= 0 )
+        if(  CLib::IsArrayWithKeys( $arrField ) )
         {
             $nId = self::query()->insertGetId( $arrField );
             if ( is_int( $nId ) && $nId > 0 )
