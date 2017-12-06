@@ -251,7 +251,7 @@ class CQueryBase extends Model
             }
 
             $arrRtn = $arrRtn->toArray();
-            if( is_array( $arrRtn ) && count( $arrRtn ) > 0 )
+            if( ! is_array( $arrRtn ) || count( $arrRtn ) > 0 )
             {
 
             }
