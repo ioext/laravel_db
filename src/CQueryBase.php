@@ -250,6 +250,8 @@ class CQueryBase extends Model
                 $arrRtn = self::query()->where( $arrWhere )->get( $arrField );
             }
 
+            $arrRtn =
+
             if( $arrRtn == null )
             {
                 $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
