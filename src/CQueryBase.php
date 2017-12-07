@@ -61,7 +61,7 @@ class CQueryBase extends Model
         if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
         {
             $bRtn = self::query()->where( $arrWhere )->delete();
-            if( ! $bRtn )
+            if( $bRtn === false )
             {
                 $nErrCode = CErrCode::DELETE_FALSE;
                 $sDesc = "删除失败";
