@@ -54,7 +54,7 @@ class CQueryBase extends Model
      * @param string $sDesc
      * @return int | bRtn   判断 nErrCode==200和bRtn===true
      */
-    public static function del( $arrWhere, & $bRtn = false, $sDesc = "success" )
+    public static function del( $arrWhere, & $bRtn = false, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
 
