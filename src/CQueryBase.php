@@ -23,7 +23,7 @@ class CQueryBase extends Model
         if(  CLib::IsArrayWithKeys( $arrField ) )
         {
             $nId = self::query()->insertGetId( $arrField );
-            if ( CLib::SafeIntVal($nId) is_i     )
+            if ( CLib::SafeIntVal($nId) is_     )
             {
                 $arrRtn = [
                     'id' => $nId,
