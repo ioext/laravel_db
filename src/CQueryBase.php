@@ -100,7 +100,7 @@ class CQueryBase extends Model
                 $bRtn = self::query()->where( $arrWhere )->update( $arrField );
             }
 
-            if( $bRtn ===   )
+            if( $bRtn === false  )
             {
                 $nErrCode = CErrCode::UPDATE_FALSE;
                 $sDesc = "更新失败";
