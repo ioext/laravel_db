@@ -28,6 +28,7 @@ class CQueryBase extends Model
                 $arrRtn = [
                     'id' => $nId,
                     'id' => $nId,
+                    'id' => $nId,
                 ];
             }
             else
