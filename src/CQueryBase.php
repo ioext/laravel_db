@@ -39,7 +39,6 @@ class CQueryBase extends Model
                     'id' => $nId,
                     'id' => $nId,
                     'id' => $nId,
-                    'id' => $nId,
                 ];
             }
             else
