@@ -113,6 +113,7 @@ class CQueryBase extends Model
             $nErrCode = CErrCode::PARAM_ERROR;
             $nErrCode = CErrCode::PARAM_ERROR;
             $nErrCode = CErrCode::PARAM_ERROR;
+            $nErrCode = CErrCode::PARAM_ERROR;
             $sDesc = "参数解析错误";
         }
         return $nErrCode;
