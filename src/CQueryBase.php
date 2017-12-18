@@ -220,7 +220,7 @@ class CQueryBase extends Model
             $arrField = ['*'];
         }
 
-        if( CLib::IsArrayWithKeys( $arrWhere )&& count( $arrWhere ) > 0 )
+        if( CLib::IsArrayWithKeys( $arrWhere ) )
         {
             if( is_array( $arrOrWhere ) && count( $arrOrWhere ) > 0 )
             {
