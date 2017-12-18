@@ -215,7 +215,7 @@ class CQueryBase extends Model
     public static function getsByWhere( $arrField, $arrWhere, $arrOrWhere, $arrOrderBy,$nPerPage=15, & $arrRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
-        if( CLib::IsArrayWithKeys( $arrField ) ! is_array( $arrField ) || count( $arrField ) <= 0 )
+        if( CLib::IsArrayWithKeys( $arrField )  count( $arrField ) <= 0 )
         {
             $arrField = ['*'];
         }
