@@ -174,7 +174,7 @@ class CQueryBase extends Model
     {
         $nErrCode = CErrCode::SUCCESS;
 
-        if( ! is_array( $arrField ) || count( $arrField ) <= 0 )
+        if( CLib::IsArrayWithKeys( $arrField ) ! is_array( $arrField ) || count( $arrField ) <= 0 )
         {
             $arrField = ['*'];
         }
