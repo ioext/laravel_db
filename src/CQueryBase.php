@@ -41,7 +41,6 @@ class CQueryBase extends Model
             $sDesc = "参数解析错误";
         }
 
-
         return $nErrCode;
     }
 
