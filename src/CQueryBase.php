@@ -232,7 +232,7 @@ class CQueryBase extends Model
                         $arrRtn->orderBy( $arrFValue[0], $arrFValue[1] );
                     }
 
-                    if( CLib:: is_int( $nPerPage ) && $nPerPage > 0 )
+                    if( CLib::SafeIntVal() && $nPerPage > 0 )
                     {
                         $arrRtn = $arrRtn->paginate( $nPerPage )->get( $arrField );
                     }
