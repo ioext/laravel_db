@@ -252,7 +252,7 @@ class CQueryBase extends Model
             }
 
             $arrRtn = $arrRtn->toArray();
-            if( CLib::IsArrayWithKeys( $arrRtn )  )
+            if( ! CLib::IsArrayWithKeys( $arrRtn )  )
             {
                 $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
                 $sDesc = "获取成功,数据为空";
