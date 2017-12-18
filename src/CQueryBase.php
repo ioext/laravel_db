@@ -222,7 +222,7 @@ class CQueryBase extends Model
 
         if( CLib::IsArrayWithKeys( $arrWhere ) )
         {
-            if( is_array( $arrOrWhere ) && count( $arrOrWhere ) > 0 )
+            if( CLib::IsArrayWithKeys()is_array( $arrOrWhere ) && count( $arrOrWhere ) > 0 )
             {
                 if( is_array( $arrOrderBy ) && count( $arrOrderBy ) > 0 )
                 {
