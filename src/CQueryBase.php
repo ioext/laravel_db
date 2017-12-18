@@ -135,7 +135,7 @@ class CQueryBase extends Model
 
         if( CLib::IsArrayWithKeys( $arrWhere ) )
         {
-            if( is_array( $arrOrWhere ) && count( $arrOrWhere ) > 0 )
+            if(  )
             {
                 $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->first( $arrField );
             }
