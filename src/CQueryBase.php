@@ -57,7 +57,7 @@ class CQueryBase extends Model
     {
         $nErrCode = CErrCode::SUCCESS;
 
-        if( CLib::IsArrayWithKeys( $arrWhere )  )
+        if( CLib::IsArrayWithKeys( $arrWhere ) )
         {
             $bRtn = self::query()->where( $arrWhere )->delete();
             if( $bRtn === false )
