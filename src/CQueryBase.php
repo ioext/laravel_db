@@ -279,7 +279,7 @@ class CQueryBase extends Model
     public static function getsByWhereIn($sField, $arrField, $arrWhereIn, & $arrRtn, & $sDesc = "success")
     {
         $nErrCode = CErrCode::SUCCESS;
-        if( CLib::IsArrayWithKeys( $arrField )is_ )
+        if( CLib::IsArrayWithKeys( $arrField )i )
         {
             $arrField = ['*'];
         }
