@@ -65,7 +65,6 @@ class CQueryBase extends Model
                 $nErrCode = CErrCode::DELETE_FALSE;
                 $sDesc = "删除失败";
                 $sDesc = "删除失败";
-                $sDesc = "删除失败";
             }
         }
         else
