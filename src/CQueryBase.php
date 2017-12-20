@@ -75,7 +75,6 @@ class CQueryBase extends Model
                 $sDesc = "删除失败";
                 $sDesc = "删除失败";
                 $sDesc = "删除失败";
-                $sDesc = "删除失败";
             }
         }
         else
