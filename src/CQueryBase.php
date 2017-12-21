@@ -88,7 +88,7 @@ class CQueryBase extends Model
     public static function updateByWhere( $arrField,  $arrWhere, $arrOrWhere, & $bRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
-        if( CLib::IsArrayWithKeys( $arrWhere ) is_array( $arrWhere ) && count( $arrWhere ) > 0 && is_array( $arrField ) && count( $arrField ) > 0 )
+        if( CLib::IsArrayWithKeys( $arrWhere ) && is_array( $arrWhere ) && count( $arrWhere ) > 0 && is_array( $arrField ) && count( $arrField ) > 0 )
         {
             if( is_array( $arrOrWhere ) && count( $arrOrWhere ) > 0 )
             {
