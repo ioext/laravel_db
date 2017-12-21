@@ -223,7 +223,7 @@ class CQueryBase extends Model
         {
             if( CLib::IsArrayWithKeys( $arrOrWhere )  )
             {
-                if( CLib::IsArrayWithKeys($arrOrderBy) && count( $arrOrderBy ) > 0 )
+                if( CLib::IsArrayWithKeys($arrOrderBy) &&  )
                 {
                     $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere );
                     foreach( $arrOrderBy as $nFKey => $arrFValue )
