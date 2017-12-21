@@ -90,7 +90,7 @@ class CQueryBase extends Model
         $nErrCode = CErrCode::SUCCESS;
         if( CLib::IsArrayWithKeys( $arrWhere ) && CLib::IsArrayWithKeys( $arrField ) )
         {
-            if( CLib::IsArrayWithKeys($arrOrWhere)&& count( $arrOrWhere ) > 0 )
+            if( CLib::IsArrayWithKeys($arrOrWhere))
             {
                 $bRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->update( $arrField );
             }
