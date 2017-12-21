@@ -284,7 +284,7 @@ class CQueryBase extends Model
             $arrField = ['*'];
         }
 
-        if( CLib::SafeStringVal( $sField )  && CLib::IsArrayWithKeys($arrWhereIn) is_array( $arrWhereIn ) && count( $arrWhereIn ) > 0  )
+        if( CLib::SafeStringVal( $sField )  && CLib::IsArrayWithKeys($arrWhereIn)  )
         {
             $arrRtn = self::query()->whereIn($sField,$arrWhereIn)->get($arrField);
             if( $arrRtn == null )
