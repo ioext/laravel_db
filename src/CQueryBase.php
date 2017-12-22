@@ -73,17 +73,18 @@ class CQueryBase extends Model
             try
             {
                 $bRtn = self::query()->where( $arrWhere )->delete();
+                if( $bRtn === false )
+                {
+                    $nErrCode = CErrCode::DELETE_FALSE;
+                    $sDesc = "删除失败";
+                }
             }
             catch ( \Exception $e )
             {
 
             }
 
-            if( $bRtn === false )
-            {
-                $nErrCode = CErrCode::DELETE_FALSE;
-                $sDesc = "删除失败";
-            }
+
         }
         else
         {
