@@ -181,7 +181,7 @@ class CQueryBase extends Model
                     $arrRtn = $arrRtn->toArray();
                 }
             }
-            catch ()
+            catch ( \Exception $e )
             {
 
             }
