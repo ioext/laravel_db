@@ -70,6 +70,14 @@ class CQueryBase extends Model
 
         if( CLib::IsArrayWithKeys( $arrWhere ) )
         {
+            try
+            {
+
+            }
+            catch ( \Exception $e )
+            {
+
+            }
             $bRtn = self::query()->where( $arrWhere )->delete();
             if( $bRtn === false )
             {
