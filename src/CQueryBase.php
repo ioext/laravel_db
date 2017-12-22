@@ -72,13 +72,13 @@ class CQueryBase extends Model
         {
             try
             {
-
+                $bRtn = self::query()->where( $arrWhere )->delete();
             }
             catch ( \Exception $e )
             {
 
             }
-            $bRtn = self::query()->where( $arrWhere )->delete();
+
             if( $bRtn === false )
             {
                 $nErrCode = CErrCode::DELETE_FALSE;
