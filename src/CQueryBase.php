@@ -162,6 +162,10 @@ class CQueryBase extends Model
         {
             try
             {}
+            catch ()
+            {
+
+            }
             if( CLib::IsArrayWithKeys( $arrOrWhere ) )
             {
                 $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->first( $arrField );
