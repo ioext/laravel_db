@@ -80,7 +80,7 @@ class CQueryBase extends Model
             }
             catch ( \Exception $e )
             {
-                $sDesc = "数据表:[ ". self::getTable() ." ]查询记录SQL";
+                $sDesc = "数据表:[ ". self::getTable() ." ]查询记录SQL异常\n[" .."";
             }
 
 
