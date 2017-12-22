@@ -39,11 +39,11 @@ class CQueryBase extends Model
                     $sDesc = "添加失败";
                 }
             }
-            catch ( Exception $sDesc )
+            catch ( \Exception $e )
             {
-                $sDesc = "数据库链接异常";
+                $sDesc = "数据表:[ " . self::getTable() . " ]查询记录SQL异常\n[ " . $e->getMessage() ."]";
+                $nErrCode =
             }
-
 
         }
         else
