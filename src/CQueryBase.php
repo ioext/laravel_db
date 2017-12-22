@@ -131,7 +131,6 @@ class CQueryBase extends Model
 
 
 
-
         }
         else
         {
