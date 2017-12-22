@@ -110,16 +110,16 @@ class CQueryBase extends Model
         {
             try
             {
-
+                if( CLib::IsArrayWithKeys($arrOrWhere) )
+                {
+                    $bRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->update( $arrField );
+                }
             }
-            catch ()
+            catch ( \Exception $e )
             {
 
             }
-            if( CLib::IsArrayWithKeys($arrOrWhere) )
-            {
-                $bRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->update( $arrField );
-            }
+
             else
             {
                 $bRtn = self::query()->where( $arrWhere )->update( $arrField );
