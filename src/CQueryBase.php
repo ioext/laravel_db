@@ -4,6 +4,7 @@ namespace ioext\laravel_db;
 
 use Illuminate\Database\Eloquent\Model;
 use ioext\tool\CLib;
+use League\Flysystem\Exception;
 
 class CQueryBase extends Model
 {
@@ -22,18 +23,27 @@ class CQueryBase extends Model
 
         if(  CLib::IsArrayWithKeys( $arrField ) )
         {
-            $nId = self::query()->insertGetId( $arrField );
-            if ( CLib::SafeIntVal( $nId ))
+            try
             {
-                $arrRtn = [
-                    'id' => $nId,
-                ];
+                $nId = self::query()->insertGetId( $arrField );
+                if ( CLib::SafeIntVal( $nId ))
+                {
+                    $arrRtn = [
+                        'id' => $nId,
+                    ];
+                }
+                else
+                {
+                    $nErrCode = CErrCode::INSERT_FALSE;
+                    $sDesc = "添加失败";
+                }
             }
-            else
+            catch ( Exception $sDesc )
             {
-                $nErrCode = CErrCode::INSERT_FALSE;
-                $sDesc = "添加失败";
+                $sDesc = "数据库链接异常";
             }
+
+
         }
         else
         {
