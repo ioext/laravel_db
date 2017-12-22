@@ -126,7 +126,7 @@ class CQueryBase extends Model
             }
             catch ( \Exception $e )
             {
-
+                $sDesc =
             }
         }
         else
