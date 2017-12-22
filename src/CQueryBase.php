@@ -162,20 +162,20 @@ class CQueryBase extends Model
         {
             try
             {
-
+                if( CLib::IsArrayWithKeys( $arrOrWhere ) )
+                {
+                    $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->first( $arrField );
+                }
+                else
+                {
+                    $arrRtn = self::query()->where( $arrWhere )->first( $arrField );
+                }
             }
             catch ()
             {
 
             }
-            if( CLib::IsArrayWithKeys( $arrOrWhere ) )
-            {
-                $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->first( $arrField );
-            }
-            else
-            {
-                $arrRtn = self::query()->where( $arrWhere )->first( $arrField );
-            }
+
 
             if( $arrRtn == null )
             {
