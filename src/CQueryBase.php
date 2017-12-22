@@ -114,16 +114,17 @@ class CQueryBase extends Model
                 {
                     $bRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->update( $arrField );
                 }
+                else
+                {
+                    $bRtn = self::query()->where( $arrWhere )->update( $arrField );
+                }
             }
             catch ( \Exception $e )
             {
 
             }
 
-            else
-            {
-                $bRtn = self::query()->where( $arrWhere )->update( $arrField );
-            }
+
 
             if( $bRtn === false  )
             {
