@@ -118,6 +118,7 @@ class CQueryBase extends Model
                 {
                     $bRtn = self::query()->where( $arrWhere )->update( $arrField );
                 }
+
                 if( $bRtn === false  )
                 {
                     $nErrCode = CErrCode::UPDATE_FALSE;
@@ -159,6 +160,7 @@ class CQueryBase extends Model
 
         if( CLib::IsArrayWithKeys( $arrWhere ) )
         {
+            try
             if( CLib::IsArrayWithKeys( $arrOrWhere ) )
             {
                 $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->first( $arrField );
