@@ -8,6 +8,7 @@ use League\Flysystem\Exception;
 
 class CQueryBase extends Model
 {
+    public $timestamps = false;
 
     /**
      * 插入一条数据
