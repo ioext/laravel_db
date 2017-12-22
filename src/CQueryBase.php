@@ -42,7 +42,7 @@ class CQueryBase extends Model
             catch ( \Exception $e )
             {
                 $sDesc = "数据表:[ " . self::getTable() . " ]查询记录SQL异常\n[ " . $e->getMessage() ."]";
-                $nErrCode = CErrCode::
+                $nErrCode = CErrCode::DB_SEL_EXCEPTION
             }
 
         }
