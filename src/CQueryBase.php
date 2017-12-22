@@ -161,7 +161,9 @@ class CQueryBase extends Model
         if( CLib::IsArrayWithKeys( $arrWhere ) )
         {
             try
-            {}
+            {
+
+            }
             catch ()
             {
 
