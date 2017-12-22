@@ -170,6 +170,16 @@ class CQueryBase extends Model
                 {
                     $arrRtn = self::query()->where( $arrWhere )->first( $arrField );
                 }
+
+                if( $arrRtn == null )
+                {
+                    $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
+                    $sDesc = "获取成功,数据为空";
+                }
+                else
+                {
+                    $arrRtn = $arrRtn->toArray();
+                }
             }
             catch ()
             {
@@ -177,15 +187,7 @@ class CQueryBase extends Model
             }
 
 
-            if( $arrRtn == null )
-            {
-                $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
-                $sDesc = "获取成功,数据为空";
-            }
-            else
-            {
-                $arrRtn = $arrRtn->toArray();
-            }
+
         }
         else
         {
