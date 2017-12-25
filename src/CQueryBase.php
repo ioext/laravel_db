@@ -174,7 +174,7 @@ class CQueryBase extends Model
                 if( $arrRtn === null )
                 {
                     $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
-                    $sDesc = "获取成功,数据为空";
+                    $sDesc = "查询成功,数据为空";
                 }
                 else
                 {
