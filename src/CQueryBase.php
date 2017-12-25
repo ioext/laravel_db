@@ -171,7 +171,7 @@ class CQueryBase extends Model
                     $arrRtn = self::query()->where( $arrWhere )->first( $arrField );
                 }
 
-                if( $arrRtn == null )
+                if( $arrRtn === null )
                 {
                     $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
                     $sDesc = "获取成功,数据为空";
@@ -183,7 +183,7 @@ class CQueryBase extends Model
             }
             catch ( \Exception $e )
             {
-                $sDesc = "数据表:[ ". self::getTable() ." ]查询记录SQL异常\n[" . $e->getMessage() ."]";
+                $sDesc = "数据表:[ ". ( new self() )->getTable() ." ]查询记录SQL异常\n[" . $e->getMessage() ."]";
                 $nErrCode = CErrCode::DB_SEL_EXCEPTION;
             }
         }
