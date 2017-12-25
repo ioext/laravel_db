@@ -2,13 +2,10 @@
 
 namespace ioext\laravel_db;
 
-use Illuminate\Database\Eloquent\Model;
 use ioext\tool\CLib;
-use League\Flysystem\Exception;
 
-class CQueryBase extends Model
+class CQueryBase extends CQueryBaseExtension
 {
-    public $timestamps = false;
 
     /**
      * 插入一条数据
