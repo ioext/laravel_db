@@ -170,7 +170,7 @@ class CQueryBase extends Model
                 {
                     $arrRtn = self::query()->where( $arrWhere )->first( $arrField );
                 }
-
+var_dump($arrRtn);die;
                 if( $arrRtn == null )
                 {
                     $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
