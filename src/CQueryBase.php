@@ -212,14 +212,12 @@ class CQueryBase extends CQueryBaseExtension
         }
         try
         {
-
+            $arrRtn = self::query()->get( $arrField );
         }
-        catch ()
+        catch ( \Exception $e )
         {
 
         }
-
-        $arrRtn = self::query()->get( $arrField );
 
         if( $arrRtn == NULL )
         {
