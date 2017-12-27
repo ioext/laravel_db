@@ -210,6 +210,7 @@ class CQueryBase extends CQueryBaseExtension
         {
             $arrField = ['*'];
         }
+
         try
         {
             $arrRtn = self::query()->get( $arrField );
@@ -220,7 +221,7 @@ class CQueryBase extends CQueryBaseExtension
             $nErrCode = CErrCode::DB_SEL_EXCEPTION;
         }
 
-        if( $arrRtn == NULL )
+        if( $arrRtn === null )
         {
             $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
             $sDesc = "获取成功,数据为空";
