@@ -275,21 +275,26 @@ class CQueryBase extends CQueryBaseExtension
 
                     if( CLib::SafeIntVal( $nPerPage ) )
                     {
-                        $arrRtn = $arrRtn->paginate( $nPerPage )->get( $arrField );
+                        $arrRtn = $arrRtn->paginate( $nPerPage );
                     }
-                    else
-                    {
-                        $arrRtn = $arrRtn->get( $arrField );
-                    }
+
                 }
                 else
                 {
-                    $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere )->get( $arrField );
+                    $arrRtn = self::query()->where( $arrWhere )->orWhere( $arrOrWhere );
                 }
             }
             else
             {
-                $arrRtn = self::query()->where( $arrWhere )->get( $arrField );
+                $arrRtn = self::query()->where( $arrWhere );
+            }
+            try
+            {
+
+            }
+            catch ()
+            {
+
             }
 
             $arrRtn = $arrRtn->toArray();
