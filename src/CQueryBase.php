@@ -210,6 +210,14 @@ class CQueryBase extends CQueryBaseExtension
         {
             $arrField = ['*'];
         }
+        try
+        {
+
+        }
+        catch ()
+        {
+
+        }
 
         $arrRtn = self::query()->get( $arrField );
 
