@@ -290,11 +290,11 @@ class CQueryBase extends CQueryBaseExtension
             }
             try
             {
-
+                $arrRtn = $arrRtn->get( $arrField );
             }
             catch ( \Exception $e )
             {
-                $arrRtn = $arrRtn->get( $arrField );
+
             }
 
             $arrRtn = $arrRtn->toArray();
