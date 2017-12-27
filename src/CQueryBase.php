@@ -291,18 +291,27 @@ class CQueryBase extends CQueryBaseExtension
             try
             {
                 $arrRtn = $arrRtn->get( $arrField );
+                if( $arrRtn === null )
+                {
+
+                }
+                else
+                {
+
+                }
+                $arrRtn = $arrRtn->toArray();
+                if( ! CLib::IsArrayWithKeys( $arrRtn )  )
+                {
+                    $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
+                    $sDesc = "获取成功,数据为空";
+                }
             }
             catch ( \Exception $e )
             {
-
+                $sDesc = "数据表:[ ". self::getTableName() ." ]查询记录SQL异常\n[" . $e->getMessage() ."]";
+                $nErrCode = CErrCode::DB_SEL_EXCEPTION;
             }
 
-            $arrRtn = $arrRtn->toArray();
-            if( ! CLib::IsArrayWithKeys( $arrRtn )  )
-            {
-                $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
-                $sDesc = "获取成功,数据为空";
-            }
         }
         else
         {
