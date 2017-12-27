@@ -292,9 +292,9 @@ class CQueryBase extends CQueryBaseExtension
             {
 
             }
-            catch ()
+            catch ( \Exception $e )
             {
-
+                $arrRtn = $arrRtn->get( $arrField );
             }
 
             $arrRtn = $arrRtn->toArray();
