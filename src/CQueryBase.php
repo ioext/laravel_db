@@ -288,7 +288,6 @@ class CQueryBase extends CQueryBaseExtension
             {
                 $arrRtn = self::query()->where( $arrWhere );
             }
-
             try
             {
                 $arrRtn = $arrRtn->get( $arrField );
