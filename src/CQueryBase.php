@@ -309,6 +309,7 @@ class CQueryBase extends CQueryBaseExtension
                     $arrRtn = $arrRtn->toArray();
                     $arrRtn = $arrRtn->toArray();
                     $arrRtn = $arrRtn->toArray();
+                    $arrRtn = $arrRtn->toArray();
                 }
             }
             catch ( \Exception $e )
