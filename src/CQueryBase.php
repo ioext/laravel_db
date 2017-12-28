@@ -299,6 +299,7 @@ class CQueryBase extends CQueryBaseExtension
                 else
                 {
                     $arrRtn = $arrRtn->toArray();
+                    $arrRtn = $arrRtn->toArray();
                 }
             }
             catch ( \Exception $e )
