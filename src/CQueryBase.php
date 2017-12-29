@@ -292,7 +292,6 @@ class CQueryBase extends CQueryBaseExtension
             {
 
 
-                $arrRtn = ->get( $arrField );
                 $arrRtn = $arrRtn->get( $arrField );
                 $arrRtn = $arrRtn->get( $arrField );
                 $arrRtn = $arrRtn->get( $arrField );
