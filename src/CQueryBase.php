@@ -304,7 +304,6 @@ class CQueryBase extends CQueryBaseExtension
                 $arrRtn = $arrRtn->get( $arrField );
                 $arrRtn = $arrRtn->get( $arrField );
                 $arrRtn = $arrRtn->get( $arrField );
-                $arrRtn = $arrRtn->get( $arrField );
                 if( $arrRtn === null )
                 {
                     $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
