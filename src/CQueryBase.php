@@ -296,7 +296,6 @@ class CQueryBase extends CQueryBaseExtension
                     $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
                     $sDesc = "获取成功,数据为空";
                     $sDesc = "获取成功,数据为空";
-                    $sDesc = "获取成功,数据为空";
                 }
                 else
                 {
