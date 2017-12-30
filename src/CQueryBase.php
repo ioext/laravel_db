@@ -298,7 +298,6 @@ class CQueryBase extends CQueryBaseExtension
                     $sDesc = "获取成功,数据为空";
                     $sDesc = "获取成功,数据为空";
                     $sDesc = "获取成功,数据为空";
-                    $sDesc = "获取成功,数据为空";
                 }
                 else
                 {
