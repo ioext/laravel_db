@@ -29,7 +29,19 @@ class CQueryBase extends CQueryBaseExtension
                 }
                 else
                 {
+                    $nValue = self::query()->insert( $arrField );
+                }
 
+                if( $nValue != -1 )
+                {
+                    if( $nValue === null )
+                    {
+                        $sDesc = "通讯成功,草做失败";
+                    }
+                }
+                else
+                {
+                    $sDesc = "操作失败";
                 }
             }
             catch ( \Exception $e )
@@ -37,6 +49,8 @@ class CQueryBase extends CQueryBaseExtension
 
             }
         }
+
+        return $nValue;
         $nErrCode = CErrCode::SUCCESS;
 
         if(  CLib::IsArrayWithKeys( $arrField ) )
