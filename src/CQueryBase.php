@@ -15,8 +15,10 @@ class CQueryBase extends CQueryBaseExtension
      * @param string $sDesc
      * @return int
      */
-    public static function add( $arrField, $bIsGetId = true, & $nId = null , & $sDesc = "success" )
+    public static function add( $arrField, $bIsGetId = true, & $nId = -1 , & $sDesc = "success" )
     {
+        $nId = -1;
+        if( CLib::IsArrayWithKeys( $arrField ) )
         $nErrCode = CErrCode::SUCCESS;
 
         if(  CLib::IsArrayWithKeys( $arrField ) )
