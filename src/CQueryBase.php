@@ -36,7 +36,11 @@ class CQueryBase extends CQueryBaseExtension
                 {
                     if( $nValue === null )
                     {
-                        $sDesc = "通讯成功,草做失败";
+                        $sDesc = "通讯成功,操作失败";
+                    }
+                    else
+                    {
+                        $sDesc = "操作成功";
                     }
                 }
                 else
@@ -46,7 +50,7 @@ class CQueryBase extends CQueryBaseExtension
             }
             catch ( \Exception $e )
             {
-
+                $sDesc = "";
             }
         }
 
