@@ -37,7 +37,7 @@ class CQueryBase extends CQueryBaseExtension
             }
             catch ( \Exception $e )
             {
-                $sDesc = "数据表:[ " . self::getTableName() . " ]查询记录SQL异常\n[ " . $e->getMessage() ."]";
+                $sDesc = "数据表:[ " . self::getTableName() . " ]执行SQL异常\n[ " . $e->getMessage() ."]";
                 $nErrCode = CErrCode::DB_SEL_EXCEPTION;
             }
 
