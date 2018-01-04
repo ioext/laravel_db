@@ -19,6 +19,16 @@ class CQueryBase extends CQueryBaseExtension
     {
         $nId = -1;
         if( CLib::IsArrayWithKeys( $arrField ) )
+        {
+            try
+            {
+
+            }
+            catch ()
+            {
+
+            }
+        }
         $nErrCode = CErrCode::SUCCESS;
 
         if(  CLib::IsArrayWithKeys( $arrField ) )
