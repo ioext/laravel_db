@@ -58,6 +58,7 @@ class CQueryBase extends CQueryBaseExtension
 
 
 
+
         return $nErrCode;
     }
 
