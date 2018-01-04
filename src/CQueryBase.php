@@ -7,8 +7,6 @@ use ioext\tool\CLib;
 class CQueryBase extends CQueryBaseExtension
 {
 
-
-
     /**
      * 插入一条数据
      *
