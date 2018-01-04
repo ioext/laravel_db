@@ -34,21 +34,21 @@ class CQueryBase extends CQueryBaseExtension
                 {
                     $nId = self::query()->insert($arrField);
                 }
-
-                if ( $nId > 0)
-                {
-                    $sDesc = "添加成功";
-                }
-                else
-                {
-                    $nErrCode = CErrCode::INSERT_FALSE;
-                    $sDesc = "添加失败";
-                }
             }
             catch ( \Exception $e )
             {
                 $sDesc = "数据表:[ " . self::getTableName() . " ]查询记录SQL异常\n[ " . $e->getMessage() ."]";
                 $nErrCode = CErrCode::DB_SEL_EXCEPTION;
+            }
+
+            if ( $nId > 0)
+            {
+                $sDesc = "添加成功";
+            }
+            else
+            {
+                $nErrCode = CErrCode::INSERT_FALSE;
+                $sDesc = "添加失败";
             }
         }
         else
