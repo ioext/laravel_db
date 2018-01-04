@@ -55,7 +55,6 @@ class CQueryBase extends CQueryBaseExtension
             $sDesc = "参数解析错误";
         }
 
-
         return $nErrCode;
     }
 
