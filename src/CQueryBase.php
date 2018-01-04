@@ -22,9 +22,16 @@ class CQueryBase extends CQueryBaseExtension
         {
             try
             {
+                if( $bIsGetId )
+                {
 
+                }
+                else
+                {
+
+                }
             }
-            catch ()
+            catch ( \Exception $e )
             {
 
             }
