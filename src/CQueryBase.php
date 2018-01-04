@@ -17,12 +17,13 @@ class CQueryBase extends CQueryBaseExtension
      * @param string $sDesc
      * @return int
      */
-    public static function add( $arrField, $bIsGetId = true, &$arrRtn = [], & $sDesc = "success" )
+    public static function add( $arrField, $bIsGetId = true, & $nId = null , & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
 
         if(  CLib::IsArrayWithKeys( $arrField ) )
         {
+            $nId = -1;
             try
             {
                 if( $bIsGetId )
@@ -31,14 +32,12 @@ class CQueryBase extends CQueryBaseExtension
                 }
                 else
                 {
-
+                    $nId = self::query()->insert($arrField);
                 }
 
-                if ( CLib::SafeIntVal( $nId ))
+                if ( $nId > 0)
                 {
-                    $arrRtn = [
-                        'id' => $nId,
-                    ];
+                    $sDesc = "添加成功";
                 }
                 else
                 {
