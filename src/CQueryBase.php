@@ -17,7 +17,7 @@ class CQueryBase extends CQueryBaseExtension
      * @param string $sDesc
      * @return int
      */
-    public static function add( $arrField, &$arrRtn = [], & $sDesc = "success" )
+    public static function add( $arrField, $bIsGetId = true, &$arrRtn = [], & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
 
@@ -25,7 +25,15 @@ class CQueryBase extends CQueryBaseExtension
         {
             try
             {
-                $nId = self::query()->insertGetId( $arrField );
+                if( $bIsGetId )
+                {
+                    $nId = self::query()->insertGetId( $arrField );
+                }
+                else
+                {
+
+                }
+
                 if ( CLib::SafeIntVal( $nId ))
                 {
                     $arrRtn = [
