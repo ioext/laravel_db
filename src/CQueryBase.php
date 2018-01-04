@@ -2,6 +2,7 @@
 
 namespace ioext\laravel_db;
 
+use Illuminate\Support\Facades\DB;
 use ioext\tool\CLib;
 
 class CQueryBase extends CQueryBaseExtension
@@ -15,16 +16,16 @@ class CQueryBase extends CQueryBaseExtension
      * @param string $sDesc
      * @return int
      */
-    public static function add( $arrField, $bIsGetId = true, & $nId = -1 , & $sDesc = "success" )
+    public static function add( $arrField, $bIsGetId = true, & $nValue = -1 , & $sDesc = "success" )
     {
-        $nId = -1;
+        $nValue = -1;
         if( CLib::IsArrayWithKeys( $arrField ) )
         {
             try
             {
                 if( $bIsGetId )
                 {
-
+                    $nValue = self::query()->insertGetId($arrField);
                 }
                 else
                 {
