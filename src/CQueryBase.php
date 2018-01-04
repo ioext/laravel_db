@@ -16,45 +16,9 @@ class CQueryBase extends CQueryBaseExtension
      * @param string $sDesc
      * @return int
      */
-    public static function add( $arrField, $bIsGetId = true, & $nValue = -1 , & $sDesc = "success" )
+    public static function add( $arrField, $bIsGetId = true, & $nId = null , & $sDesc = "success" )
     {
-        $nValue = -1;
-        if( CLib::IsArrayWithKeys( $arrField ) )
-        {
-            try
-            {
-                if( $bIsGetId )
-                {
-                    $nValue = self::query()->insertGetId($arrField);
-                }
-                else
-                {
-                    $nValue = self::query()->insert( $arrField );
-                }
 
-                if( $nValue != -1 )
-                {
-                    if( $nValue === null )
-                    {
-                        $sDesc = "通讯成功,操作失败";
-                    }
-                    else
-                    {
-                        $sDesc = "操作成功";
-                    }
-                }
-                else
-                {
-                    $sDesc = "操作失败";
-                }
-            }
-            catch ( \Exception $e )
-            {
-                $sDesc = "";
-            }
-        }
-
-        return $nValue;
         $nErrCode = CErrCode::SUCCESS;
 
         if(  CLib::IsArrayWithKeys( $arrField ) )
