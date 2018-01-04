@@ -43,12 +43,12 @@ class CQueryBase extends CQueryBaseExtension
 
             if ( $nId > 0)
             {
-                $sDesc = "添加成功";
+                $sDesc = "操作成功";
             }
             else
             {
                 $nErrCode = CErrCode::INSERT_FALSE;
-                $sDesc = "添加失败";
+                $sDesc = "操作失败";
             }
         }
         else
