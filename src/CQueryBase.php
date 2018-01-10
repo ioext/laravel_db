@@ -367,7 +367,6 @@ class CQueryBase extends CQueryBaseExtension
      * 分组获取,多维数组
      * 分组获取,多维数组
      * 分组获取,多维数组
-     * 分组获取,多维数组
      *
      * @param $arrField
      * @param $arrWhere
