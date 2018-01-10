@@ -439,4 +439,72 @@ class CQueryBase extends CQueryBaseExtension
 
         return $nErrCode;
     }
+    public static function getsByWhereGroupBy( $arrField, $arrWhere, $arrGroupByField, & $arrRtn,& $sDesc = "success" )
+    {
+        $nErrCode = CErrCode::SUCCESS;
+
+        if( CLib::IsArrayWithKeys( $arrField ) )
+        {
+            $arrField = ['*'];
+        }
+
+        $arrRtn = self::query();
+
+        if( is_array( $arrWhere ) && count( $arrWhere ) > 0 )
+        {
+            if( is_array( $arrGroupByField ) && count( $arrGroupByField ) > 0 )//todo
+            {
+                $arrRtn = $arrRtn->where($arrWhere)->get( $arrField );
+                foreach ( $arrGroupByField as $v )
+                {
+                    $arrRtn = $arrRtn->groupBy( $v );
+                }
+                if( $arrRtn == null )
+                {
+                    $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
+                    $sDesc = "获取成功,数据为空";
+                }
+                else
+                {
+                    $arrRtn = $arrRtn->toArray();
+                }
+            }
+            else
+            {
+                $nErrCode = self::getsByWhere( $arrField,$arrWhere,[],[],0,$arrRtn,$sDesc );
+            }
+        }
+        elseif( $arrWhere == '' || count( $arrWhere ) == 0 || $arrWhere == null )
+        {
+            if( is_array( $arrGroupByField ) && count( $arrGroupByField ) > 0 )
+            {
+                $arrRtn = $arrRtn->get( $arrField );
+                foreach ( $arrGroupByField as $v )
+                {
+                    $arrRtn = $arrRtn->groupBy( $v );
+                }
+                if( $arrRtn == null )
+                {
+                    $nErrCode = CErrCode::SUCCESS_NOTING_DATA;
+                    $sDesc = "获取成功,数据为空";
+                }
+                else
+                {
+                    $arrRtn = $arrRtn->toArray();
+                }
+            }
+            else
+            {
+                $nErrCode = CErrCode::PARAM_ERROR;
+                $sDesc = "参数解析错误";
+            }
+        }
+        else
+        {
+            $nErrCode = CErrCode::PARAM_ERROR;
+            $sDesc = "参数解析错误";
+        }
+
+        return $nErrCode;
+    }
 }
