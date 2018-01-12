@@ -258,6 +258,7 @@ class CQueryBase extends CQueryBaseExtension
      * @param string $sDesc
      * @return int
      */
+     */
     public static function getsByWhere( $arrField, $arrWhere, $arrOrWhere, $arrOrderBy,$nPerPage=15, & $arrRtn, & $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
