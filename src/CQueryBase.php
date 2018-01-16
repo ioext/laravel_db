@@ -255,7 +255,6 @@ class CQueryBase extends CQueryBaseExtension
      * @param $arrOrderBy   [[field,'desc'],[field,'asc']]
      * @param int $nPerPage 15
      * @param $arrRtn
-     * @param string $sDesc
      * @return int
      */
     public static function getsByWhere( $arrField, $arrWhere, $arrOrWhere, $arrOrderBy,$nPerPage=15, & $arrRtn, & $sDesc = "success" )
