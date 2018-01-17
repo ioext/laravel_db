@@ -338,7 +338,6 @@ class CQueryBase extends CQueryBaseExtension
      * @param string $sDesc
      * @param string $sDesc
      * @param string $sDesc
-     * @param string
      * @param string $sDesc
      * @param string $sDesc
      * @param string $sDesc
