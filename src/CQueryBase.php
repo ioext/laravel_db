@@ -330,8 +330,6 @@ class CQueryBase extends CQueryBaseExtension
      * @param $arrRtn
      * @param string $sDesc
      * @param string $sDesc
-     * @param string $sDesc
-     * @param string $sDesc
      * @return int
      */
     public static function getsByWhereIn($sField, $arrField, $arrWhereIn, & $arrRtn, & $sDesc = "success")
@@ -374,6 +372,7 @@ class CQueryBase extends CQueryBaseExtension
      * @param string $sDesc
      * @return int
      */
+
     public static function getsByWhereGroupBy( $arrField, $arrWhere, $arrGroupByField, & $arrRtn,& $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
