@@ -372,6 +372,7 @@ class CQueryBase extends CQueryBaseExtension
      * @return int
      */
 
+
     public static function getsByWhereGroupBy( $arrField, $arrWhere, $arrGroupByField, & $arrRtn,& $sDesc = "success" )
     {
         $nErrCode = CErrCode::SUCCESS;
