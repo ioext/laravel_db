@@ -368,7 +368,6 @@ class CQueryBase extends CQueryBaseExtension
      * @param $arrWhere
      * @param $arrGroupByField
      * @param $arrRtn
-     * @param string $sDesc
      * @return int
      */
     public static function getsByWhereGroupBy( $arrField, $arrWhere, $arrGroupByField, & $arrRtn,& $sDesc = "success" )
