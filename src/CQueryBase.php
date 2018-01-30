@@ -331,6 +331,7 @@ class CQueryBase extends CQueryBaseExtension
      * @param $sField
      * @param $sField
      * @param $sField
+     * @param $sField
      * @param $arrField
      * @param $arrWhereIn
      * @param $arrRtn
