@@ -325,6 +325,7 @@ class CQueryBase extends CQueryBaseExtension
      * where in 获取二维数组
      *
      * @param $sField
+     * @param $sField
      * @param $arrField
      * @param $arrWhereIn
      * @param $arrRtn
