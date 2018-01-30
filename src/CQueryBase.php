@@ -334,7 +334,6 @@ class CQueryBase extends CQueryBaseExtension
      * @param $sField
      * @param $sField
      * @param $sField
-     * sField
      * @param $sField
      * @param $sField
      * @param $sField
