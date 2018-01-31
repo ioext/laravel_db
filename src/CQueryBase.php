@@ -337,7 +337,6 @@ class CQueryBase extends CQueryBaseExtension
      * @return int
      * @return int
      * @return int
-     * @return int
      */
     public static function getsByWhereIn($sField, $arrField, $arrWhereIn, & $arrRtn, & $sDesc = "success")
     {
