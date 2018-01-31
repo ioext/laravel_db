@@ -332,7 +332,6 @@ class CQueryBase extends CQueryBaseExtension
      * ng $sDesc
      * @return int
      * @return int
-     * @return int
      */
     public static function getsByWhereIn($sField, $arrField, $arrWhereIn, & $arrRtn, & $sDesc = "success")
     {
