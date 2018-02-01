@@ -322,14 +322,11 @@ class CQueryBase extends CQueryBaseExtension
 
 
     /**
-     * where in 获取二维数组
-     *
      * @param $sField
      * @param $arrField
      * @param $arrWhereIn
      * @param $arrRtn
-     * @param string
-     * ng $sDesc
+     * @param string $sDesc
      * @return int
      */
     public static function getsByWhereIn($sField, $arrField, $arrWhereIn, & $arrRtn, & $sDesc = "success")
