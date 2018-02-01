@@ -339,7 +339,6 @@ class CQueryBase extends CQueryBaseExtension
      * @param string
      * @param string
      * @param string
-     * @param string
      * ng $sDesc
      * @return int
      */
