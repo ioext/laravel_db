@@ -328,7 +328,7 @@ class CQueryBase extends CQueryBaseExtension
      * @param $arrField
      * @param $arrWhereIn
      * @param $arrRtn
-     * @param string
+     * @param strin
      * ng $sDesc
      * @return int
      */
